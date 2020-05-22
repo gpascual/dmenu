@@ -1,0 +1,38 @@
+# Maintainer: Gonzalo Pascual <gonzalopascual.gpc@gmail.com>
+
+_pkgname=dmenu
+pkgname=$_pkgname-gpascual
+pkgver=5.2
+pkgrel=1
+pkgdesc='A dmenu with some patches applied: dmenu_center'
+url='https://tools.suckless.org/dmenu/'
+arch=('x86_64')
+license=('MIT')
+depends=('sh' 'libxinerama' 'libxft' 'freetype2')
+provides=($_pkgname)
+conflicts=($_pkgname)
+source=(sources.tar)
+sha512sums=('0084d56ff13b1ab85c94c89bd0981273ab4caba3c42934eb5a0f8e476fb8ef42eaa7947e589d600271598a27f7886ab1bb6555db8c4e104ccbaa05da7776a1ca')
+
+prepare() {
+  cd $srcdir
+  echo "CPPFLAGS+=${CPPFLAGS}" >> config.mk
+  echo "CFLAGS+=${CFLAGS}" >> config.mk
+  echo "LDFLAGS+=${LDFLAGS}" >> config.mk
+}
+
+build() {
+  cd $srcdir
+  make \
+	  X11INC=/usr/include/X11 \
+	  X11LIB=/usr/lib/X11 \
+	  FREETYPEINC=/usr/include/freetype2
+}
+
+package() {
+  cd $srcdir
+  make PREFIX=/usr DESTDIR="${pkgdir}" install
+  install -Dm 644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}"
+}
+
+# vim: ts=2 sw=2 et:
