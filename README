@@ -1,3 +1,21 @@
+# dmenu - my personal patched dmenu build
+
+## Patches applied
+
+- border
+- center
+- fuzzymatch
+- fuzzyhighlight
+- line height
+
+### Maybe-list
+- incremental
+- non-blocking stdin
+- xresources
+
+## Original README
+
+```markdown
 dmenu - dynamic menu
 ====================
 dmenu is an efficient dynamic menu for X.
@@ -22,3 +40,4 @@ Afterwards enter the following command to build and install dmenu
 Running dmenu
 -------------
 See the man page for details.
+```
