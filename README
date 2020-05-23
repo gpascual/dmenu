@@ -13,6 +13,47 @@
 - non-blocking stdin
 - xresources
 
+## Repository branches
+
+**build**
+
+The latest version of the patched dmenu.
+
+It contains all of my chosen patches already merged into the base code of the latest tagged dmenu version.
+
+There are other branches merged into this one: **misc** and **distribution**
+
+**\*-patch**
+
+There is a branch for each patch that will be applied to my dmenu.
+This branch uses the name of the patch suffixed with `-patch`.
+
+For example, the _border_ patch has its own branch called __border-patch__.
+
+These branches contain the base original code plus the patch already applied.
+
+The idea is to merge all those _patch_ branches into the **build** one to cook the customized dmenu.
+
+**distribution**
+
+This branch contains an Archlinux build system PKGBUILD and a shell script to help building a _dmenu_ package.
+
+**misc**
+
+Basically, it contains a modified README file.
+
+## Installation
+
+### Archlinux
+1. Make sure to checkout the **build** branch
+2. Move to the `dist/archlinux` directory inside the project
+3. Execute the `./build.sh` script
+4. Install the generated package with `sudo pacman -U #PACKAGE_FILE_NAME#`
+
+### Original instructions
+
+You'll find them below
+
 ## Original README
 
 ```markdown
@@ -41,3 +82,9 @@ Running dmenu
 -------------
 See the man page for details.
 ```
+
+## External links
+
+* dmenu -
+https://tools.suckless.org/dmenu/
+* The Suckless philosophy - https://suckless.org/philosophy/
