@@ -12,7 +12,7 @@ depends=('sh' 'libxinerama' 'libxft' 'freetype2')
 provides=($_pkgname)
 conflicts=($_pkgname)
 source=(sources.tar)
-sha512sums=('0084d56ff13b1ab85c94c89bd0981273ab4caba3c42934eb5a0f8e476fb8ef42eaa7947e589d600271598a27f7886ab1bb6555db8c4e104ccbaa05da7776a1ca')
+sha512sums=('3e2d7c246568b81de960d972ca9322366de6ef0bcf40397a52a9a9c561e8ca1024ad5b80d4f9fcf15e671c62595d6719236a937b4a3083b848b908d7bf202d42')
 
 prepare() {
   cd $srcdir
