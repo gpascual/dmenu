@@ -6,6 +6,7 @@
 - fuzzymatch
 - fuzzyhighlight
 - line height
+- wmtype (from Baitinq's repo [here](https://github.com/Baitinq/dmenu/blob/master/patches/dmenu-wm_type.diff))
 
 ### Maybe-list
 - incremental
@@ -128,3 +129,4 @@ git tag -m "4.10 with gpascual's patch selection" gpascual-4.10
 * dmenu - https://tools.suckless.org/dmenu/
 * The Suckless philosophy - https://suckless.org/philosophy/
 * qguv's dwm README (from where I took most of the _Repository structure_ section) - https://github.com/qguv/dwm
+* wmtype patch from Baitinq - https://github.com/Baitinq/dmenu/blob/master/patches/dmenu-wm_type.diff
